@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body
+{
+    box-sizing: border-box;
+    background-color: #f5f6fa;
+    display: grid;
+    grid-template-columns: [full-start] minmax(2rem, 1fr) [content-start] repeat(8, minmax(min-content, 12rem)) [content-end] minmax(2rem, 1fr) [full-end];
+}
+
+section
+{
+    grid-column: full-start / full-end;
+}

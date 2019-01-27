@@ -1,0 +1,19 @@
+.header
+{
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(to right, rgba(#000,.7), rgba(#000,.7)), url('../img/hero.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    padding: 10rem;
+    text-align: center;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media only screen and (max-width: 42.5em)
+    {
+        padding: 10rem 5rem;
+    }
+}
