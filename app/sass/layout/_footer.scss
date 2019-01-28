@@ -1,0 +1,20 @@
+.footer
+{
+    grid-column: 1 / -1;
+    background-color: #3e3ee3;
+    color: #fefeff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-icons
+    {
+        &__icon
+        {
+            @include fluid-type(22px, 32px);
+            color: #fefeff;
+            text-decoration: none;
+            margin: 2rem;
+        }
+    }
+}

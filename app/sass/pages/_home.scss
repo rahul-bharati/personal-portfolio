@@ -58,17 +58,68 @@
     &__div
     {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+        grid-template-columns: repeat(2, 50%);
         grid-gap: 0;
         padding: 0;
+
+        @media only screen and (max-width: 56.2em)
+        {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
     }
 
     &__items
     {
+        position: relative;
         &--img
         {
+            display: block;
             width: 100%;
-            object-fit: contain;
+            object-fit: cover;
         }
+
+        &--name
+        {
+            position: absolute;
+            display: block;
+            width: 0%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #333;
+            transition: all .4s cubic-bezier(.69,.04,.36,1.39);
+
+            & > *
+            {
+                transform: translateY(500rem);
+                @include fluid-type(20px, 28px);
+                transition: all .3s .4s;
+                backface-visibility: hidden;
+                text-decoration: none;
+            }
+        }
+
+        &:hover > &--name
+        {
+            width: 100%;
+            background: rgba(#feffef, .8);
+        }
+
+        &:hover > &--name > *
+        {
+            transform: translateY(0);
+        }
+    }
+
+    .full-view
+    {
+        grid-column: 1 / -1;
     }
 }
