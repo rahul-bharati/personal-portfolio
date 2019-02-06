@@ -17,6 +17,11 @@
             margin: 2rem;
             transition: all .3s;
 
+            @media only screen and (max-width: 42.6em)
+            {
+                margin: 1rem;
+            }
+
             &:hover
             {
                 color: #222;
